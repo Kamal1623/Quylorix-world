@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUYLORIX - Your Dream Online, Within 24 Hrs</title>
+    <meta name="description" content="Premium web development and digital marketing services. Transform your business online within 24 hours.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #000;
+            --accent: #4169E1;
+            --text: #333;
+            --light: #f8f9fa;
+            --white: #fff;
+            --robo-orange: #FF8C00;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 5%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .call-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .call-btn:hover {
+            color: var(--accent);
+        }
+        
+        .cta-button {
+            padding: 10px 25px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        
+        .cta-button:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        /* Hero with Video Background */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 5% 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            /* Light overlay to make text readable */
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 8vw, 80px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .hero .slogan {
+            font-size: clamp(18px, 3vw, 28px);
+            margin-bottom: 40px;
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            padding: 80px 5%;
+            background: var(--light);
+            overflow: hidden;
+        }
+        
+        .tech-stack h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 60px;
+        }
+        
+        .tech-slider {
+            display: flex;
+            gap: 60px;
+            animation: slide 30s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { transform: translateX(0);
+            }
+            100% { transform: translateX(-50%);
+            }
+        }
+        
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            min-width: 120px;
+        }
+        
+        .tech-item img {
+            width: 80px;
+            height: 80px;
+            transition: all 0.3s;
+        }
+        
+        .tech-item:hover img {
+            transform: translateY(-10px);
+        }
+        
+        /* Services */
+        .services {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 20px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+            /* Clickable */
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(65, 105, 225, 0.15);
+            border-color: var(--accent);
+        }
+        
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        /* Niches */
+        .niches {
+            padding: 100px 5%;
+            background: var(--light);
+        }
+        
+        .niches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .niche-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .niche-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        }
+        
+        .niche-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .niche-content {
+            padding: 30px;
+        }
+        
+        .niche-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        /* About */
+        .about {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 30px;
+        }
+        
+        .founder-card {
+            background: var(--light);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .founder-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .founder-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            border: 5px solid var(--white);
+            object-fit: cover;
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 100px 5%;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 20px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn-white {
+            padding: 18px 45px;
+            background: var(--white);
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-white:hover {
+            background: var(--accent);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        /* WhatsApp & Modals */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+            }
+            50% { box-shadow: 0 10px 50px rgba(37, 211, 102, 0.7);
+            }
+        }
+        
+        .whatsapp-float img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Scroll Robo */
+        .scroll-robo {
+            position: fixed;
+            bottom: 10px;
+            left: -100px; /* Start off screen */
+            width: 60px;
+            z-index: 998;
+            pointer-events: none;
+            transition: left 0.5s ease-out;
+            opacity: 0;
+        }
+
+        .scroll-robo.run {
+            animation: roboRun 2s linear forwards;
+            opacity: 1;
+        }
+
+        @keyframes roboRun {
+            0% { left: -100px;
+            }
+            50% { left: 50vw;
+            }
+            100% { left: 110vw;
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: modalPop 0.3s ease-out;
+            min-height: 300px; /* Ensures space for sequential questions */
+        }
+
+        @keyframes modalPop {
+            from { transform: scale(0.8);
+            opacity: 0; }
+            to { transform: scale(1); opacity: 1;
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .modal-h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: 0.3s;
+        }
+        
+        .form-group textarea {
+            resize: vertical; 
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        /* Robo Wizard Styles */
+        .robo-wizard-container {
+            text-align: center;
+            overflow: hidden;
+            min-height: 300px;
+        }
+        
+        .robo-mascot {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);
+            }
+            50% { transform: translateY(-10px);
+            }
+        }
+
+        .wizard-step {
+            display: none;
+            animation: slideInRight 0.5s ease;
+        }
+
+        .wizard-step.active {
+            display: block;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%);
+            opacity: 0; }
+            to { transform: translateX(0); opacity: 1;
+            }
+        }
+
+        .wizard-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .wizard-btn {
+            padding: 12px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .wizard-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 5% 30px;
+            background: #1a1a1a;
+            color: var(--white);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.6;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links, .nav-actions {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo-container">
+                <img src="QUYLORIX_assets/logo.png" alt="Q" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">QUYLORIX</span>
+            </a>
+            
+ 
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#niches">Niches</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        
+            <div class="nav-actions">
+                <a href="tel:+918754509203" class="call-btn">
+                    📞 +91 8754509203
+                </a>
+                <button class="cta-button" onclick="startWhatsAppFlow()">Get Started</button>
+            </div>
+
+        
+            <div class="mobile-menu" onclick="startWhatsAppFlow()"> <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <video autoplay muted loop playsinline class="hero-video">
+          
+            <source src="QUYLORIX_assets/hero_bg_loop.mp4" type="video/mp4">
+            </video>
+
+        <div class="hero-content">
+            <h1>Your Dream Online,<br>Within 24 Hrs</h1>
+            <p class="slogan">Premium Web Development & Digital Marketing Solutions</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="startWhatsAppFlow()">Start Your Project</button>
+      
+                <button class="btn btn-secondary" onclick="openDemo()">Book a Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <h2>Technologies We Master</h2>
+        <div class="tech-slider">
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      
+                <span>HTML5</span>
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <span>CSS3</span>
+            </div>
+            <div class="tech-item">
+      
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                <span>React</span>
+            </div>
+ 
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                <span>Node.js</span>
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+           
+                <span>Next.js</span>
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress">
+                <span>WordPress</span>
+            </div>
+            <div class="tech-item">
+           
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <span>HTML5</span>
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <span>CSS3</span>
+            </div>
+      
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                
+                <span>React</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Comprehensive digital solutions.
+                Click a card to customize.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" onclick="startRoboWizard('Web Development')">
+                <div class="service-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Custom websites built with modern technologies</p>
+         
+                <ul class="service-features">
+                    <li>Modern Stack Development</li>
+                    <li>Custom CMS Solutions</li>
+                    <li>E-commerce Platforms</li>
+                </ul>
+           
+            </div>
+            <div class="service-card" onclick="startRoboWizard('Digital Marketing')">
+                <div class="service-icon">📈</div>
+                <h3>Digital Marketing</h3>
+                <p>Drive traffic and grow your online presence</p>
+                <ul class="service-features">
+           
+                    <li>SEO & GEO Optimization</li>
+                    <li>PPC Campaigns</li>
+                    <li>Social Media Marketing</li>
+                </ul>
+            </div>
+            <div class="service-card" onclick="startRoboWizard('UI/UX Design')">
+  
+                <div class="service-icon">🎨</div>
+                <h3>UX/UI Design</h3>
+                <p>Beautiful, user-friendly interfaces</p>
+                <ul class="service-features">
+                    <li>User Research</li>
+            
+                    <li>Wireframing</li>
+                    <li>Visual Design</li>
+                </ul>
+            </div>
+            <div class="service-card" onclick="startRoboWizard('Business Strategy')">
+                <div class="service-icon">🚀</div>
+           
+                <h3>Business Strategy</h3>
+                <p>Strategic consulting for digital success</p>
+                <ul class="service-features">
+                    <li>Digital Transformation</li>
+                    <li>Market Analysis</li>
+               
+                    <li>Growth Strategy</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="niches" class="niches">
+        <div class="section-title">
+            <h2>Niches We've Worked In</h2>
+            <p>Delivering excellence across diverse industries</p>
+        
+        </div>
+        <div class="niches-grid">
+            <div class="niche-card">
+                <img src="https://elements-resized.envatousercontent.com/elements-cover-images/19adb266-0c90-4596-b759-15d0f2ad20f0?w=433&cf_fit=scale-down&q=85&format=auto&s=cf054dbc0525f96c7f1934620130f4d2c4a42c3774a401fe1862a99914596ac9" alt="Healthcare" class="niche-image">
+                <div class="niche-content">
+                    <h3>Healthcare & Clinics</h3>
+                    
+                    <p>Modern, patient-friendly websites for medical practices</p>
+                </div>
+            </div>
+            <div class="niche-card">
+                <img src="https://cdn.dribbble.com/userupload/14437833/file/original-a5eb35bcdc79b6ef58887f62f67abc83.png?resize=400x0" alt="Beauty" class="niche-image">
+                <div class="niche-content">
+                  
+                    <h3>Salons & Beauty</h3>
+                    <p>Elegant booking systems and showcase websites</p>
+                </div>
+            </div>
+            <div class="niche-card">
+                <img src="https://www.theclassictemplates.com/cdn/shop/files/Classic-Ecommerce-Pro.png?v=1714634334" alt="E-commerce" class="niche-image">
+           
+                <div class="niche-content">
+                    <h3>E-Commerce</h3>
+                    <p>High-converting online stores with seamless checkout</p>
+                </div>
+            </div>
+            <div class="niche-card">
+        
+                <img src="https://img.freepik.com/free-vector/local-business-landing-page-theme_23-2148590088.jpg" alt="Local" class="niche-image">
+                <div class="niche-content">
+                    <h3>Local Businesses</h3>
+                    <p>Professional websites for mechanics, real estate, and service providers</p>
+                </div>
+       
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About QUYLORIX</h2>
+                <p>With over 5 years of combined expertise in web development, digital marketing, and business strategy, QUYLORIX transforms visions into digital reality.</p>
+  
+                <p>We specialize in creating ultra-premium, conversion-focused websites that not only look stunning but drive real business results.</p>
+                <p>Our team combines technical excellence with creative innovation to deliver projects that exceed expectations.</p>
+                <p>From small businesses to enterprises, we've helped clients across the globe establish their digital presence and achieve their growth objectives.</p>
+                
+            </div>
+            <div class="founder-card">
+                <img src="QUYLORIX_assets/kamal_founder_portrait.jpg" alt="Kamal - Founder" class="founder-image" onerror="this.src='https://via.placeholder.com/200?text=Kamal'">
+     
+                <h3>Kamal</h3>
+                <p>Founder & Lead Strategist</p>
+                <p style="margin-top: 15px;">Passionate about creating digital experiences that make a difference</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Ready to Start Your Project?</h2>
+  
+        <p>Let's bring your vision to life within 24 hours</p>
+        <div class="contact-buttons">
+            <button class="btn-white" onclick="startWhatsAppFlow()">Contact Sales</button>
+            <button class="btn-white" onclick="openDemo()">Book a Demo Call</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+       
+                <h3>QUYLORIX</h3>
+                <p>Your Dream Online, Within 24 Hrs</p>
+                <p>Premium Web Development & Digital Marketing</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+        
+                <a href="#services">Web Development</a>
+                <a href="#services">Digital Marketing</a>
+                <a href="#services">UX/UI Design</a>
+                <a href="#services">Business Strategy</a>
+            </div>
+            <div class="footer-section">
+           
+                <h3>Global Reach</h3>
+                <p>Australia • Tokyo • UAE</p>
+                <p>Hong Kong • Chennai • USA • UK</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+          
+                <p>Email: kamal@quylorix.world</p> 
+                <p>Phone: +91 8754509203</p>
+                <p>Available 24/7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;
+                2025 QUYLORIX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float" onclick="startWhatsAppFlow()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+
+    <div class="scroll-robo" id="scrollRobo">
+        <svg viewBox="0 0 512 512" fill="#FF8C00">
+            <path d="M256 0c-44.18 0-80 35.82-80 80v16h160V80c0-44.18-35.82-80-80-80zM128 128c-17.67 0-32 14.33-32 32v192c0 17.67 14.33 32 32 32h256c17.67 0 32-14.33 32-32V160c0-17.67-14.33-32-32-32H128zm0 32h256v192H128V160zm64 48c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm128 0c-17.67 0-32 14.33-32 32s14.33 32 
+                32 32 32-14.33 32-32-14.33-32-32-32zm-160 144c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32H160z"/>
+        </svg>
+    </div>
+
+    <div id="waModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('waModal')">&times;</span>
+            <h2 class="modal-h2">Start Your Journey</h2>
+            <p id="waDescription" style="margin-bottom: 20px; color: #666;">We'll start with your main service interest.</p>
+            <div id="waSteps">
+                </div>
+        </div>
+    </div>
+
+    <div id="roboModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('roboModal')">&times;</span>
+            <div class="robo-wizard-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Robo" class="robo-mascot">
+                <div id="wizardSteps">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- CONSTANTS ---
+        const INTERNAL_EMAIL = 'kamal@quylorix.world'; 
+        const BUSINESS_WHATSAPP = '918754509203'; 
+        // UPDATED CALENDLY LINK
+        const VIRTUAL_CALENDLY_LINK = 'https://calendly.com/kamal-quylorix/30min'; 
+        
+        // --- SCROLLING ROBO LOGIC ---
+        let isScrolling;
+        const robo = document.getElementById('scrollRobo');
+        
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                header.style.padding = '10px 5%';
+            } else {
+                header.classList.remove('scrolled');
+                header.style.padding = '20px 5%';
+            }
+
+            // Robo animation logic
+            robo.classList.add('run');
+            window.clearTimeout(isScrolling);
+            
+            isScrolling = setTimeout(() => {
+                robo.classList.remove('run');
+            }, 2000); 
+        });
+
+        // --- GLOBAL MODAL FUNCTIONS ---
+        let wizardData = {};
+        
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+
+        // --- WHATSAPP QUICK START FLOW (startWhatsAppFlow) ---
+
+        function startWhatsAppFlow() {
+            wizardData = { service: '', subService: 'Quick Start', budget: 'Undisclosed', name: '', phone: '', email: '' }; // Initialize for quick start
+            document.getElementById('waModal').style.display = 'flex';
+            showWaServiceStep();
+        }
+
+        function showWaServiceStep() {
+            const container = document.getElementById('waSteps');
+            document.getElementById('waDescription').textContent = "Please select the service that best describes your need.";
+            const serviceOptions = ['Web Development', 'Digital Marketing', 'UI/UX Design', 'Business Strategy', 'Other'];
+            
+            let html = `
+                <h3 class="modal-h2">What service do you need?</h3>
+                <div class="wizard-options">
+                    ${serviceOptions.map(opt => 
+                    `<button class="wizard-btn" onclick="handleWaServiceAnswer('${opt}')">${opt}</button>`).join('')}
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function handleWaServiceAnswer(service) {
+            wizardData.service = service;
+            // Skip sub-service/budget for quick flow, jump straight to contact info
+            showWaContactStep1(); 
+        }
+
+        function showWaContactStep1() {
+            const container = document.getElementById('waSteps');
+            document.getElementById('waDescription').textContent = "We need a few details to connect you.";
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">What is your Name?</h3>
+                    <div class="form-group">
+                        <input type="text" id="waNameInput" required placeholder="Your Name" value="${wizardData.name || ''}">
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="handleWaContactAnswer('name')">Next</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function showWaContactStep2() {
+            const container = document.getElementById('waSteps');
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">What is your Phone Number?</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">We'll confirm the booking on WhatsApp.</p>
+                    <div class="form-group">
+                        <input type="tel" id="waPhoneInput" required placeholder="+91..." value="${wizardData.phone || ''}">
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="handleWaContactAnswer('phone')">Next</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function showWaContactStep3() {
+            const container = document.getElementById('waSteps');
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">What is your Email Address?</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">We need this for the virtual meeting invite.</p>
+                    <div class="form-group">
+                        <input type="email" id="waEmailInput" required placeholder="name@company.com" value="${wizardData.email || ''}">
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="handleWaContactAnswer('email')">Next Step</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+        
+        function handleWaContactAnswer(field) {
+            let inputElement;
+            if (field === 'name') inputElement = document.getElementById('waNameInput');
+            if (field === 'phone') inputElement = document.getElementById('waPhoneInput');
+            if (field === 'email') inputElement = document.getElementById('waEmailInput');
+            
+            const value = inputElement.value.trim();
+
+            if (!value) { 
+                alert('Please fill out this field.');
+                return;
+            }
+
+            wizardData[field] = value;
+
+            if (field === 'name') {
+                showWaContactStep2();
+            } else if (field === 'phone') {
+                showWaContactStep3();
+            } else if (field === 'email') {
+                // All WA Quick Start contact info is collected, now show preference step
+                showMeetingPreferenceStep('waSteps');
+            }
+        }
+        
+        // --- ROBO WIZARD FLOW (Service Card Clicks and Demo Button) ---
+
+        function startRoboWizard(serviceName) {
+            wizardData = { service: serviceName, subService: '', budget: '', name: '', phone: '', email: '' }; // Clear data on open
+            document.getElementById('roboModal').style.display = 'flex';
+            document.getElementById('roboModal').setAttribute('data-source', 'robo');
+
+            // Initial Step based on service
+            showStep1();
+        }
+
+        function openDemo() {
+             startRoboWizard('Business Strategy');
+        }
+
+        function getServiceOptions(serviceName) {
+            switch(serviceName) {
+                case 'Web Development':
+                    return ['E-Commerce Store', 'Business Portfolio', 'Landing Page', 'Blog/News', 'Other'];
+                case 'Digital Marketing':
+                    return ['More Leads/Sales', 'Brand Awareness', 'Social Media Growth', 'Local Traffic', 'Other'];
+                case 'UI/UX Design':
+                    return ['New Product Design', 'Existing Product Audit', 'Wireframing Only', 'Visual Design Only', 'Other'];
+                case 'Business Strategy':
+                    return ['Digital Transformation', 'Market Analysis', 'Growth Strategy', 'Consultation Call', 'Other'];
+                default:
+                    return ['ASAP (24 Hrs)', '1 Week', '1 Month', 'Just Browsing', 'Other'];
+            }
+        }
+
+        function showStep1() {
+            const container = document.getElementById('wizardSteps');
+            let question = `Beep Boop! 🤖 What type of sub-service are you looking for under **${wizardData.service}**?`;
+            const options = getServiceOptions(wizardData.service);
+
+            let html = `
+                <div class="wizard-step active">
+                    <h3>${question}</h3>
+                    <div class="wizard-options">
+                        ${options.map(opt => 
+                        `<button class="wizard-btn" onclick="handleStep1Answer('${opt}')">${opt}</button>`).join('')}
+                    </div>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function handleStep1Answer(answer) {
+            if (answer === 'Other') {
+                showOtherInput();
+            } else {
+                showStep2(answer); // Go to Budget step
+            }
+        }
+
+        function showOtherInput() {
+            const container = document.getElementById('wizardSteps');
+            
+            let html = `
+                <div class="wizard-step active">
+                    <h3>🤖 Please tell me more about the specific service you need:</h3>
+                    <div class="form-group" style="text-align: center;">
+                        <textarea id="otherServiceDetails" rows="4" required placeholder="e.g., Custom AI Integration, specific marketing campaign..."></textarea>
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="submitOtherDetails()">Next Step</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function submitOtherDetails() {
+            const details = document.getElementById('otherServiceDetails').value.trim();
+            if (details) {
+                showStep2(`Other: ${details}`);
+            } else {
+                alert("Please describe the service you need.");
+            }
+        }
+
+        function showStep2(previousAnswer) {
+            wizardData.subService = previousAnswer;
+            const container = document.getElementById('wizardSteps');
+
+            let html = `
+                <div class="wizard-step active">
+                    <h3>Great choice! 🤖 What is the project scope?</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">This helps us prepare the right solution for you.</p>
+                    <div class="wizard-options">
+                        <button class="wizard-btn" onclick="handleBudgetAnswer('Standard')">Standard Project Scope</button>
+                        <button class="wizard-btn" onclick="handleBudgetAnswer('Premium')">Premium Project Scope</button>
+                        <button class="wizard-btn" onclick="handleBudgetAnswer('Enterprise')">Enterprise Project Scope</button>
+                    </div>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+        
+        function handleBudgetAnswer(budget) {
+            wizardData.budget = budget;
+            // Next step: Meeting preference
+            showMeetingPreferenceStep('wizardSteps');
+        }
+
+        // --- COMMON MEETING PREFERENCE STEP ---
+        function showMeetingPreferenceStep(containerId) {
+            const container = document.getElementById(containerId);
+            const isRobo = containerId === 'wizardSteps';
+            
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">${isRobo ? 'Last step: ' : ''}How would you prefer to meet?</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Choose a virtual meeting or an in-person consultation.</p>
+                    <div class="wizard-options">
+                        <button class="wizard-btn" onclick="handleMeetingPreference('virtual', '${containerId}')">💻 Virtual Meeting</button>
+                        <button class="wizard-btn" onclick="handleMeetingPreference('inperson', '${containerId}')">🤝 In-Person Meeting</button>
+                    </div>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+        
+        function handleMeetingPreference(type, containerId) {
+            wizardData.meetingType = type;
+            if (type === 'virtual') {
+                // For virtual, we go directly to submission/redirection as contact info is already collected in WA flow, or needs to be collected now in Robo flow
+                if (containerId === 'wizardSteps' && !wizardData.name) {
+                    // Robo flow needs contact details first
+                    showContactStep1('wizardSteps', 'virtual');
+                } else {
+                    // WA flow has contact details, proceed to submission
+                    submitBooking(wizardData, containerId);
+                }
+            } else {
+                // In-Person requires date, time, and location
+                if (containerId === 'wizardSteps' && !wizardData.name) {
+                    showContactStep1('wizardSteps', 'inperson');
+                } else {
+                    showInPersonDateTimeStep(containerId);
+                }
+            }
+        }
+        
+        // --- COMMON CONTACT STEPS (Used by Robo flow when needed) ---
+        let currentContactTarget = ''; // 'virtual' or 'inperson'
+
+        function showContactStep1(containerId, targetType) {
+            currentContactTarget = targetType;
+            const container = document.getElementById(containerId);
+            const inputId = containerId === 'wizardSteps' ? 'roboInput' : 'waInput';
+            
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">What is your Name?</h3>
+                    <div class="form-group">
+                        <input type="text" id="${inputId}Name" required placeholder="Your Name" value="${wizardData.name || ''}">
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="handleContactAnswer('name', '${containerId}', '${targetType}')">Next</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function showContactStep2(containerId, targetType) {
+            const container = document.getElementById(containerId);
+            const inputId = containerId === 'wizardSteps' ? 'roboInput' : 'waInput';
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">What is your best Phone Number?</h3>
+                    <div class="form-group">
+                        <input type="tel" id="${inputId}Phone" required placeholder="+91..." value="${wizardData.phone || ''}">
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="handleContactAnswer('phone', '${containerId}', '${targetType}')">Next</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function showContactStep3(containerId, targetType) {
+            const container = document.getElementById(containerId);
+            const inputId = containerId === 'wizardSteps' ? 'roboInput' : 'waInput';
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">What is your Email Address?</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">We need this for the virtual meeting invite.</p>
+                    <div class="form-group">
+                        <input type="email" id="${inputId}Email" required placeholder="name@company.com" value="${wizardData.email || ''}">
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="handleContactAnswer('email', '${containerId}', '${targetType}')">Next Step</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        function handleContactAnswer(field, containerId, targetType) {
+            const inputId = containerId === 'wizardSteps' ? 'roboInput' : 'waInput';
+            let inputElement;
+
+            if (field === 'name') inputElement = document.getElementById(`${inputId}Name`);
+            if (field === 'phone') inputElement = document.getElementById(`${inputId}Phone`);
+            if (field === 'email') inputElement = document.getElementById(`${inputId}Email`);
+            
+            const value = inputElement.value.trim();
+
+            if (!value) {
+                alert('Please fill out this field.');
+                return;
+            }
+
+            wizardData[field] = value;
+
+            // Logic to advance the steps
+            if (field === 'name') {
+                showContactStep2(containerId, targetType);
+            } else if (field === 'phone') {
+                showContactStep3(containerId, targetType);
+            } else if (field === 'email') {
+                if (targetType === 'virtual') {
+                    submitBooking(wizardData, containerId); // Submit virtual
+                } else if (targetType === 'inperson') {
+                    showInPersonDateTimeStep(containerId); // Go to In-Person date/time
+                }
+            }
+        }
+
+        // --- IN-PERSON SPECIFIC STEPS (For In-Person flow) ---
+
+        function showInPersonDateTimeStep(containerId) {
+            const container = document.getElementById(containerId);
+            const inputId = containerId === 'wizardSteps' ? 'roboInput' : 'waInput';
+            let html = `
+                <div class="wizard-step active">
+                    <h3 class="modal-h2">When and Where should we meet?</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Provide your preferred date, time, and location/city.</p>
+                    <div class="form-group">
+                        <label for="${inputId}Date">Date</label>
+                        <input type="date" id="${inputId}Date" required value="${wizardData.date || ''}">
+                    </div>
+                    <div class="form-group">
+                        <label for="${inputId}Time">Time</label>
+                        <input type="time" id="${inputId}Time" required value="${wizardData.time || ''}">
+                    </div>
+                    <div class="form-group">
+                        <label for="${inputId}Location">Location/City</label>
+                        <input type="text" id="${inputId}Location" required placeholder="e.g., Chennai, Dubai, etc." value="${wizardData.location || ''}">
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 20px;" onclick="submitBooking(wizardData, '${containerId}')">Request In-Person Meet</button>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        // --- INTERNAL NOTIFICATION HELPER ---
+
+        function sendInternalEmailNotification(data, type) {
+            // Function to simulate sending data to the specified internal email
+            const { name, phone, email, date, time, location, service, subService, budget } = data;
+            const serviceString = subService && subService !== 'Quick Start' ? `${service} (${subService})` : service;
+            const budgetString = budget && budget !== 'Undisclosed' ? `Project Scope: ${budget}` : 'Project Scope: Undisclosed';
+            
+            let meetDetails = '';
+            if (type === 'virtual') {
+                meetDetails = 'Meeting Type: Virtual (Calendly Redirect)';
+            } else if (type === 'inperson') {
+                meetDetails = `Meeting Type: In-Person | Requested Time: ${date} at ${time} | Location: ${location}`;
+            }
+
+            const emailBody = `
+NEW LEAD ALERT - SERVICES TAB (Email Notification Only)
+
+TO: ${INTERNAL_EMAIL}
+
+--- CUSTOMER DETAILS ---
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+--- PROJECT DETAILS ---
+Service: ${serviceString}
+${budgetString}
+${meetDetails}
+`;
+            
+            // This alert/console log simulates the internal email being sent
+            console.log("--- SIMULATED INTERNAL EMAIL SENT ---");
+            console.log(emailBody);
+            // alert(`✅ Internal Email Notification Sent to ${INTERNAL_EMAIL}\n\nCheck console for details.`); 
+        }
+
+        function sendInternalWhatsAppNotification(data, type) {
+            // Function to send detailed WhatsApp message to the business number
+            const { name, phone, email, date, time, location, service, subService, budget } = data;
+            const serviceString = subService && subService !== 'Quick Start' ? `${service} (${subService})` : service;
+            const budgetString = budget && budget !== 'Undisclosed' ? `*Project Scope:* ${budget}%0A` : '';
+            
+            let internalWaMessage = '';
+
+            if (type === 'virtual') {
+                // Removed the 'Action' line
+                internalWaMessage = `*NEW VIRTUAL LEAD ALERT (WA Quick Start)!* 🚨%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Service:* ${serviceString}%0A${budgetString}`;
+            } else if (type === 'inperson') {
+                const meetDetails = `${date} at ${time} in ${location}`;
+                // Removed the 'Action' line
+                internalWaMessage = `*NEW IN-PERSON LEAD ALERT (WA Quick Start)!* 🚨%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Service:* ${serviceString}%0A${budgetString}*Requested In-Person Time:* ${meetDetails}`;
+            }
+
+            const internalWaUrl = `https://wa.me/${BUSINESS_WHATSAPP}?text=${internalWaMessage}`;
+            window.open(internalWaUrl, '_blank');
+        }
+
+        // --- PRIMARY SUBMISSION LOGIC ---
+
+        function submitBooking(data, containerId) {
+            const container = document.getElementById(containerId);
+            const modalId = containerId === 'wizardSteps' ? 'roboModal' : 'waModal';
+            const type = data.meetingType;
+            
+            // Collect In-Person specific fields if necessary
+            if (type === 'inperson' && containerId !== 'waSteps') {
+                const inputId = containerId === 'wizardSteps' ? 'roboInput' : 'waInput';
+                data.date = document.getElementById(`${inputId}Date`).value.trim();
+                data.time = document.getElementById(`${inputId}Time`).value.trim();
+                data.location = document.getElementById(`${inputId}Location`).value.trim();
+
+                if (!data.date || !data.time || !data.location) {
+                    alert('Please fill out all date, time, and location fields.');
+                    return;
+                }
+            }
+            
+            const serviceString = data.subService && data.subService !== 'Quick Start' ? `${data.service} (${data.subService})` : data.service;
+
+            // 1. Simulating loading
+            container.innerHTML = `
+                <div class="wizard-step active">
+                    <h3>Processing... 🤖</h3>
+                    <p>Preparing internal notifications and finalizing your request...</p>
+                </div>
+            `;
+
+            setTimeout(() => {
+                let successMessage = '';
+
+                if (containerId === 'wizardSteps') {
+                    // SERVICES TAB FLOW (Email Notification Only + Calendly Redirect for Virtual)
+                    sendInternalEmailNotification(data, type);
+                    
+                    if (type === 'virtual') {
+                        // Redirect to Calendly for Virtual Meet from Services tab
+                        const calendlyLink = `${VIRTUAL_CALENDLY_LINK}?name=${encodeURIComponent(data.name)}&email=${encodeURIComponent(data.email)}&a1=${encodeURIComponent(serviceString)}`;
+                        window.open(calendlyLink, '_self'); 
+                        successMessage = `You are being taken to the Calendly link. We have successfully sent your details to **${INTERNAL_EMAIL}** for follow-up.`;
+                    } else {
+                        // In-Person Meet from Services tab
+                        successMessage = `I have completed the setup for your **In-Person** meeting request. Your details were sent to **${INTERNAL_EMAIL}** and you will be contacted shortly for confirmation.`;
+                    }
+                    
+                } else if (containerId === 'waSteps') {
+                    // WHATSAPP QUICK START FLOW (Internal WA Notification Only - NO Calendly Redirect)
+                    sendInternalWhatsAppNotification(data, type);
+
+                    if (type === 'virtual') {
+                        // New logic: Do NOT redirect to Calendly. Tell customer you will send the link.
+                        successMessage = `We have sent your detailed request to our team on WhatsApp. **The Calendly link for your virtual meeting will be sent to your WhatsApp shortly by Kamal.**`;
+                    } else {
+                        // In-Person Meet from WA Quick Start
+                        successMessage = `We have sent your detailed in-person request to our team on **+91 8754509203** via WhatsApp. They will contact you to confirm the meeting.`;
+                    }
+                }
+                
+                // Display final success message
+                container.innerHTML = `
+                    <div class="wizard-step active">
+                        <h3 style="color: green">Done! ✅</h3>
+                        <p>${successMessage}</p>
+                        <button class="cta-button" style="margin-top:20px" onclick="closeModal('${modalId}')">Awesome!</button>
+                    </div>
+                `;
+            }, 1500);
+        }
+
+    </script>
+</body>
+</html>
